@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import { Mail, Lock, User } from 'lucide-react';
 
 function Signup() {
-  const { register, handleSubmit, formState: { errors }, watch } = useForm();
+  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm();
 
   const onSubmit = (data) => {
     console.log('Form submitted:', data);
+    reset();
   };
 
   return (

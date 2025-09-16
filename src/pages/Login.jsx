@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import { Mail, Lock } from 'lucide-react';
 
 function Login() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
   
   const onSubmit = (data) => {
     console.log('Form submitted:', data);
+    reset();
   };
 
   return (
